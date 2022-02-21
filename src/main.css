@@ -2,7 +2,9 @@ html {
     font-size: 10px;
 }
 body {
-    width: 50vw;
-    margin: 0 auto;
     background-color: rgb(37, 37, 37);
+}
+.main {
+    display: flex;
+    justify-content: center;
 }

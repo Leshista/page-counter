@@ -16,13 +16,13 @@ function App() {
     };
 
     return (
-        <div>
+        <main className='main'>
             {formIsOpen ? (
                 <Form onAddNote={SubmitHandler} />
             ) : (
                 <FormButton changeFormIsOpenState={formOpenHandler} />
             )}
-        </div>
+        </main>
     );
 }
 

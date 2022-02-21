@@ -1,7 +1,9 @@
+import styles from './FormButton.module.css';
+
 const FormButton = ({ changeFormIsOpenState }) => {
     return (
         <div>
-            <button className="form-button" onClick={changeFormIsOpenState}>
+            <button className={styles['form-opener']} onClick={changeFormIsOpenState}>
                 Add New
             </button>
         </div>

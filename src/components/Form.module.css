@@ -1,4 +1,24 @@
+.form-card {
+    margin-top: 5rem;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 1px 1px 20px #000;
+}
 .form {
+    font-size: 3rem;
+    min-height: 20rem;
+    min-width: 50vw;
     display: flex;
     flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+.form input {
+    font-size: 2rem;
+    min-width: 50%;
+}
+.form__submit {
+    font-size: 3rem;
+    border-radius: 5px;
+    width: 8rem;
 }
