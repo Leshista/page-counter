@@ -17,17 +17,25 @@ function App() {
 
     const SubmitHandler = (event) => {
         event.preventDefault();
-        setItems((prevItems) => [
-            ...prevItems,
-            {
-                book: event.target[0].value,
-                pages: event.target[1].value,
-                id: itemId,
-                key: itemId,
-            },
-        ]);
-        setItemId(itemId + 1);
-        setFormIsOpen(!formIsOpen);
+        if (event.target[0].value.trim().length === 0) {
+            console.log('name is empty!');
+        } else if (event.target[1].value.trim().length === 0) {
+            console.log('pages is empty!');
+        } else if (event.target[1].value.trim() < 0) {
+            console.log('pages is negative!');
+        } else {
+            setItems((prevItems) => [
+                ...prevItems,
+                {
+                    book: event.target[0].value,
+                    pages: event.target[1].value,
+                    id: itemId,
+                    key: itemId,
+                },
+            ]);
+            setItemId(itemId + 1);
+            setFormIsOpen(!formIsOpen);
+        }
     };
 
     const deleteHandler = (event) => {
