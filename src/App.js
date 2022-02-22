@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import Form from './components/Form';
 import FormButton from './components/FormButton';
+import Nothing from './components/Nothing';
 
 import './main.css';
 
@@ -33,6 +34,11 @@ function App() {
                 <Form onAddNote={SubmitHandler} />
             ) : (
                 <FormButton changeFormIsOpenState={formOpenHandler} />
+            )}
+            {items.length !== 0 ? (
+                items.map((object) => console.log(object))
+            ) : (
+                <Nothing />
             )}
         </main>
     );
