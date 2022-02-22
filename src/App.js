@@ -14,6 +14,7 @@ function App() {
     const formOpenHandler = () => {
         setFormIsOpen(!formIsOpen);
     };
+
     const SubmitHandler = (event) => {
         event.preventDefault();
         setItems((prevItems) => [
@@ -27,6 +28,10 @@ function App() {
         ]);
         setItemId(itemId + 1);
         setFormIsOpen(!formIsOpen);
+    };
+
+    const deleteHandler = (event) => {
+        setItems(items.filter((item) => item.id !== Number(event.target.id)));
     };
 
     return (
@@ -43,6 +48,7 @@ function App() {
                         pages={object.pages}
                         id={object.id}
                         key={object.key}
+                        onDelete={deleteHandler}
                     />
                 ))
             ) : (
