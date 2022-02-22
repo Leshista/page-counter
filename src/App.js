@@ -23,18 +23,16 @@ function App() {
         if (event.target[0].value.trim().length === 0) {
             console.log('name is empty!');
             setBackdropIsOpen(true);
-            setBackdropMessage(
-                'Book name is empty! Please type in a book name!'
-            );
+            setBackdropMessage('Book name is empty! Please enter a book name!');
         } else if (event.target[1].value.trim().length === 0) {
             setBackdropIsOpen(true);
             setBackdropMessage(
-                'Pages count is empty! Please type in a valid pages count!'
+                'Pages count is empty! Please enter a valid pages count!'
             );
-        } else if (event.target[1].value.trim() < 0) {
+        } else if (event.target[1].value.trim() <= 0) {
             setBackdropIsOpen(true);
             setBackdropMessage(
-                'Pages cannot be negative! Please type in a valid pages count!'
+                'Pages count cannot be negative or 0! Please enter a valid pages count!'
             );
         } else {
             setItems((prevItems) => [
