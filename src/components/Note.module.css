@@ -1,0 +1,11 @@
+.note {
+    min-height: 5rem;
+    min-width: 50vw;
+    margin-top: 5rem;
+    background-color: #fff;
+    font-size: 3rem;
+    line-height: 5px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 1px 1px 20px #000;
+}

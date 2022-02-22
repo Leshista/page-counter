@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import Form from './components/Form';
 import FormButton from './components/FormButton';
+import Note from './components/Note';
 import Nothing from './components/Nothing';
 
 import './main.css';
@@ -36,7 +37,14 @@ function App() {
                 <FormButton changeFormIsOpenState={formOpenHandler} />
             )}
             {items.length !== 0 ? (
-                items.map((object) => console.log(object))
+                items.map((object) => (
+                    <Note
+                        book={object.book}
+                        pages={object.pages}
+                        id={object.id}
+                        key={object.key}
+                    />
+                ))
             ) : (
                 <Nothing />
             )}
